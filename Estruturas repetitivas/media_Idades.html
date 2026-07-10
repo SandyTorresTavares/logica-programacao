@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let idades = parseInt(prompt('Digite as idades:'));
+        let soma = 0;
+        let cont = 0
+        let media
+       
+        while (idades > 0) 
+        {
+            soma += idades;
+            cont++;
+            idades = parseInt(prompt('Digite as idades:'));
+        }
+
+        if (cont === 0)
+        {
+            alert('Impossível calcular a média, pois não foram digitadas idades válidas.');
+        }
+        else
+        {
+            media = soma / cont;
+            alert(`A média das idades é ${media}`);
+        }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crescente</title>
+</head>
+<body>
+    
+    <script>
+       let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+       let numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+while (numero1 !== numero2) {
+
+    if (numero1 < numero2) {
+        alert("Crescente");
+    } else {
+        alert("Decrescente");
+    }
+
+    numero1 = parseFloat(prompt("Digite o primeiro número:"));
+    numero2 = parseFloat(prompt("Digite o segundo número:"));
+}
+
+alert("Os números são iguais.");
+    </script>
+
+    
+</body>
+</html>

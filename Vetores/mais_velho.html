@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Números Pares</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Quantas pessoas você deseja digitar?:'))
+        let nome = []
+        let idade = []
+
+        for (let i = 0; i < quantidade; i++) {
+            let nomes = prompt(`Qual o nome da ${i+1}º pessoa?:`)
+            nome.push(nomes)
+            let idades = prompt(`Qual a idade da ${i+1}º pessoa?:`)
+            idade.push(idades)
+        }
+            let maiorIdade = idade[0];
+            let posicaoMaior = 0;
+        for (let i = 1; i < idade.length; i++) {
+    
+            if (idade[i] > maiorIdade) {
+            maiorIdade = idade[i];
+            posicaoMaior = i;
+            }
+        }
+                 
+        alert(`Pessoa mais velha: ${nome[posicaoMaior]} (${maiorIdade} anos)`);
+    </script>
+</body>
+</html>

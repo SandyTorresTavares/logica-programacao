@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Números Pares</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Quantos números você deseja informar?'));
+        let numeros = [];
+        let pares = [];
+        let soma = 0;
+
+        for (let i = 0; i < quantidade; i++) {
+            let numero = parseInt(prompt(`Informe o ${i + 1}º número:`));
+            numeros.push(numero);
+            if (numero % 2 === 0) {
+                pares.push(numero);
+                
+                
+            }
+        }    
+        for (let i = 0; i < pares.length; i++) {
+                soma += pares[i];
+            }
+            if (pares.length > 0) {
+                let media = soma / pares.length;
+                alert(`A média dos números pares informados é: ${media}`);
+            } else {
+                alert('Nenhum número par foi informado.');
+            }
+
+        
+       
+
+        
+    </script>
+</body>
+</html>

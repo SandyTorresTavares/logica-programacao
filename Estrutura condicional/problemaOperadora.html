@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tempoFixo = 100;
+        let valorFixo = 50;
+        let tempoGasto = prompt('Quantos minutos você gastou no telefone?');
+        let minutosExcedentes = tempoGasto - tempoFixo;
+        let valorExcedente = minutosExcedentes * 2
+        let valorTotal = valorFixo + valorExcedente;
+
+        if (minutosExcedentes > 0) {
+            alert(`Você excedeu ${minutosExcedentes} minutos e o valor a ser pago é de R$${valorTotal}.`);
+        } else {
+            alert('Você não excedeu o tempo fixo de 100 minutos. Não há cobrança adicional. Você pagará R$50,00.');
+        }
+    </script>
+
+</body>
+</html>

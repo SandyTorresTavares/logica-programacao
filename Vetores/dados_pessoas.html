@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados das Pessoas</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt("Quantas pessoas serao digitadas?:"));
+        let alturas = [];
+        let genero = [];
+        let somaAlturaDasMulheres = 0;
+        let somaFeminino = 0;
+        let somaMasculino = 0;
+
+        for (let i = 0; i < quantidade; i++) {
+            let altura = parseFloat(prompt(`Digite a altura da ${i + 1}º pessoa:`));
+            let gen = prompt(`Digite o gênero da ${i + 1}º pessoa (M/F):`);
+            alturas.push(altura);
+            genero.push(gen);
+
+        }
+        for (let i = 0; i < quantidade; i++) {
+            if (genero[i] === "F") {
+                somaAlturaDasMulheres += alturas[i];
+                somaFeminino++;
+            } else if (genero[i] === "M") {
+                somaMasculino++;
+            }
+        }
+    let mediaAlturaMulheres = somaAlturaDasMulheres / somaFeminino;
+
+    alert(`A média de altura das mulheres é: ${mediaAlturaMulheres.toFixed(2)} \n
+     O número de homens é: ${somaMasculino}`);
+        
+    </script>
+</body>
+</html>

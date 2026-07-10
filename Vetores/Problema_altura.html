@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema de Altura</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Quantas pessoas você deseja informar?'));
+        let alturas = [];
+        let idades = []
+        let soma = 0;
+        let media = 0;
+        let porcentagemmenos = 0;
+        let porcentagemmais
+
+        for (let i = 0; i < quantidade; i++) {
+            let altura = parseFloat(prompt(`Informe a altura da ${i + 1}ª pessoa:`));
+            let idade = parseInt(prompt(`Informe a idade da ${i + 1}ª pessoa:`));
+            let nome = prompt(`Informe o nome da ${i + 1}ª pessoa:`);
+            alturas.push(altura);
+            idades.push(idade);
+            soma += altura;
+
+        }
+        media = soma / quantidade;
+        porcentagemmenos = (idades.filter(idade => idade < 16).length / quantidade) * 100;
+        porcentagemmais = (idades.filter(idade => idade > 16).length / quantidade) * 100;
+
+
+        alert(`As media das alturas informadas foram: ${media} centimentros\n A porcentagem de pessoas com menos de 16 anos é: ${porcentagemmenos.toFixed(2)}%\n A porcentagem de pessoas com mais de 16 anos é: ${porcentagemmais.toFixed(2)}%`);
+
+    </script>
+
+
+</body>
+</html>

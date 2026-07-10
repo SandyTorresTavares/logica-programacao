@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma das Linhas</title>
+</head>
+<body>
+	<script>
+		let matriz = [];
+
+	let linha = parseInt(prompt("Qual a quantidade de linhas da matriz?"));
+	let coluna = parseInt(prompt("Qual a quantidade de colunas da matriz?"));
+
+	for (let i = 0; i < linha; i++) {
+    	matriz[i] = [];
+
+    alert(`Digite os elementos da ${i + 1}ª linha:`);
+
+    for (let j = 0; j < coluna; j++) {
+        matriz[i][j] = parseInt(prompt(`Elemento [${i}][${j}]`));
+    	}
+	}
+
+		let numerosNegativos = [];
+
+	for (let i = 0; i < linha; i++) {
+    for (let j = 0; j < coluna; j++) {
+        if (matriz[i][j] < 0) {
+            numerosNegativos.push(matriz[i][j]);
+        }
+    }
+}
+
+	alert(`VETORES NEGATIVOS:\n${numerosNegativos.join("\n")}`);
+	</script>
+</body>
+</html>

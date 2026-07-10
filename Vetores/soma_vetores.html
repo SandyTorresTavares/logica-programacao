@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Quantos valores terá cada vetor?:'))
+        let vetoresA = []
+        let vetoresB = []
+        let vetoresC = []
+
+        for (let i = 0; i < quantidade; i++) {
+            let numerosA = parseInt(prompt(`informe o ${i+1}º numero do vetor A`))
+            vetoresA.push(numerosA)
+        }
+        for (let i = 0; i < quantidade; i++) {
+            let numerosB = parseInt(prompt(`informe o ${i+1}º numero do Vetor B`))
+            vetoresB.push(numerosB)
+        }
+
+        for (let i = 0; i < quantidade; i++) {
+            vetoresC[i] = vetoresA[i] + vetoresB[i];
+        }
+
+        alert(`os valores resultantes do vetores C foram ${vetoresC.join(",\n")}`);
+
+    </script>
+</body>
+</html>

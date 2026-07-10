@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comerciante</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt("Serão digitados dados de quantos produtos?"));
+
+        let nomes = [];
+        let precoCompra = [];
+        let precoVenda = [];
+
+        let abaixo10 = 0;
+        let entre10e20 = 0;
+        let acima20 = 0;
+
+        let totalCompra = 0;
+        let totalVenda = 0;
+    for (let i = 0; i < quantidade; i++) {
+        alert(`Produto ${i + 1}`);
+
+        nomes[i] = prompt("Nome:");
+        precoCompra[i] = parseFloat(prompt("Preço de compra:"));
+        precoVenda[i] = parseFloat(prompt("Preço de venda:"));
+    }
+    for (let i = 0; i < quantidade; i++) {
+
+        let lucro = ((precoVenda[i] - precoCompra[i]) / precoCompra[i]) * 100;
+        if (lucro < 10) {
+            abaixo10++;
+        } else if (lucro <= 20) {
+            entre10e20++;
+        } else {
+            acima20++;
+        }
+
+        totalCompra += precoCompra[i];
+        totalVenda += precoVenda[i];
+    }   
+    let lucroTotal = totalVenda - totalCompra;
+
+    alert(`RELATÓRIO\n
+
+    Lucro abaixo de 10%: ${abaixo10}\n
+    Lucro entre 10% e 20%: ${entre10e20}\n
+    Lucro acima de 20%: ${acima20}\n
+    \n
+    Valor total de compra: ${totalCompra.toFixed(2)}\n
+    Valor total de venda: ${totalVenda.toFixed(2)}\n
+    Lucro total: ${lucroTotal.toFixed(2)}`
+    );
+    </script>
+</body>
+</html>

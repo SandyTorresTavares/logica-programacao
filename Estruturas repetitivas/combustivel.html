@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            let combustivel = parseInt(prompt('Digite o tipo de combustível (1 para álcool, 2 para gasolina, 3 para diesel ou 4 para parar):'));
+            let alcool = 0;
+            let gasolina = 0;   
+            let diesel = 0;
+
+            while (combustivel !== 4) {
+                switch (combustivel) {
+                    case 1:
+                        alcool++;
+                        break;
+                    case 2:
+                        gasolina++;
+                        break;
+                    case 3:
+                        diesel++;
+                        break;
+                    default:
+                        alert('Opção inválida. Digite novamente.');
+                }
+                combustivel = parseInt(prompt('Digite o tipo de combustível (1 para álcool, 2 para gasolina, 3 para diesel ou 4 para parar):'));
+            }
+            alert(`Muito Obrigada! \n A quantidade de álcool foi ${alcool} \n A quantidade de gasolina foi ${gasolina} \n A quantidade de diesel foi ${diesel}.`);
+        </script>
+           
+</body>
+</html>

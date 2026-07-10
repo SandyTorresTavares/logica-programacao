@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let quantidade = parseInt(prompt('Quantos números você deseja informar?'));
+            let numeros = [];
+            let soma = 0;
+            let media = 0;
+
+            for (let i = 0 ; i < quantidade; i++) {
+                let numero = parseFloat(prompt(`Informe o ${i + 1}º número:`));
+                numeros.push(numero);
+                soma += numero;
+            }
+            media = soma / quantidade;
+
+            alert(`Os números informados foram: ${numeros.join(', ')}\nA soma dos números é: ${soma}\nA média dos números é: ${media}`);
+            
+        </script>
+    </body>
+</html>

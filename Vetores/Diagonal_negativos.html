@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let ordem = parseInt(prompt("Digite a ordem da matriz:"));
+       let matriz = [];
+
+       for (let i = 0; i < ordem; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < ordem; j++) {
+                matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+            }
+        }
+
+        let quantidadeNegativos = 0;
+
+         for (let i = 0; i < ordem; i++) {
+            for (let j = 0; j < ordem; j++) {
+                if (matriz[i][j] < 0) {
+                    quantidadeNegativos++;
+                }
+            }
+        }
+
+        let diagonal = [];
+        for (let i = 0; i < ordem; i++) {
+            for (let j = 0; j < ordem; j++) {
+                if (i === j) {
+                    diagonal.push(matriz[i][j]);
+                }
+            }
+        }
+    
+        alert(`Quantos elementos negativos na matriz: ${quantidadeNegativos}`);
+        alert(`DIAGONAL:\n${diagonal.join("\n")}`);
+
+    </script>
+</body>
+</html>

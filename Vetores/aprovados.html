@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Números Pares</title>
+</head>
+<body>
+    <script>
+    let quantidade = parseInt(prompt("Quantos alunos deseja informar?"));
+    let nomes = [];
+    let nota1 = [];
+    let nota2 = [];
+    let aprovados = "Alunos aprovados:\n";
+
+    for (let i = 0; i < quantidade; i++) {
+        alert(`Digite nome, primeira e segunda nota do ${i + 1}º aluno:`);
+        nomes[i] = prompt("Nome:");
+        nota1[i] = Number(prompt("Primeira nota:"));
+        nota2[i] = Number(prompt("Segunda nota:"));
+    }
+
+    for (let i = 0; i < quantidade; i++) {
+        let media = (nota1[i] + nota2[i]) / 2;
+
+        if (media >= 6.0) {
+            aprovados += nomes[i] + "\n";
+        }
+    }
+
+    alert(aprovados);
+
+    </script>
+</body>
+</html>

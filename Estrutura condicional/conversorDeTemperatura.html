@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let escalaInicial = prompt('Escolha a escala inicial da temperatura que será convertida: C para Celsius, F para Fahrenheit ou K para Kelvin').toUpperCase();
+        let escalaFinal = prompt('Escolha a escala de temperatura para a qual deseja converter: C para Celsius, F para Fahrenheit ou K para Kelvin').toUpperCase();
+        let temperatura = parseFloat(prompt('Digite a temperatura que deseja converter:'));
+        let resultadodeCparaF = parseFloat((temperatura * 9/5) + 32).toFixed(2);
+        let resultadodeCparaK = parseFloat(temperatura + 273.15).toFixed(2);
+        let resultadodeFparaC = parseFloat((temperatura - 32) * 5/9).toFixed(2);
+        let resultadodeFparaK = parseFloat((temperatura - 32) * 5/9 + 273.15).toFixed(2);
+        let resultadodeKparaC = parseFloat(temperatura - 273.15).toFixed(2);
+        let resultadodeKparaF = parseFloat((temperatura - 273.15) * 9/5 + 32).toFixed(2);
+
+        if (escalaInicial === 'C' && escalaFinal === 'F') {
+            alert(`A temperatura de ${temperatura}°C é equivalente a ${resultadodeCparaF}°F.`);
+        } else if (escalaInicial === 'C' && escalaFinal === 'K') {
+            alert(`A temperatura de ${temperatura}°C é equivalente a ${resultadodeCparaK}K.`);
+        } else if (escalaInicial === 'F' && escalaFinal === 'C') {
+            alert(`A temperatura de ${temperatura}°F é equivalente a ${resultadodeFparaC}°C.`);
+        } else if (escalaInicial === 'F' && escalaFinal === 'K') {
+            alert(`A temperatura de ${temperatura}°F é equivalente a ${resultadodeFparaK}K.`);
+        } else if (escalaInicial === 'K' && escalaFinal === 'C') {
+            alert(`A temperatura de ${temperatura}K é equivalente a ${resultadodeKparaC}°C.`);
+        } else if (escalaInicial === 'K' && escalaFinal === 'F') {
+            alert(`A temperatura de ${temperatura}K é equivalente a ${resultadodeKparaF}°F.`);
+        } else {
+            alert('Escalas inválidas. Por favor, escolha C, F ou K.');
+        }
+
+
+
+    </script>
+
+</body>
+</html>

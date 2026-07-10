@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let A = parseFloat(prompt('Qual o valor de A?'));
+        let B = parseFloat(prompt('Qual o valor de B?'));
+        let C = parseFloat(prompt('Qual o valor de C?'));
+        let delta = (B * B) - 4 * A * C;
+        let x1 = parseFloat((-B + Math.sqrt(delta)) / (2 * A)).toFixed(4);
+        let x2 = parseFloat((-B - Math.sqrt(delta)) / (2 * A)).toFixed(4);
+            if (delta < 0 || A == 0) {
+                alert('Não existem raízes reais para os valores informados.');
+            } else {
+                alert(`O valor de delta é ${delta} e o valor de x1 é ${x1} e o valor de x2 é ${x2}.`);
+            }
+            </script>
+
+</body>
+</html>

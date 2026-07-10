@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma das Linhas</title>
+</head>
+<body>
+	<script>
+        let matrizA = [];
+        let matrizB = [];
+        let matrizC = [];
+        let linha = parseInt(prompt("Qual a quantidade de linhas das matrizes?"));
+        let coluna = parseInt(prompt("Qual a quantidade de colunas da matrizes?"));
+
+        //Matriz A
+    for (let i = 0; i < linha; i++) {
+        matrizA[i] = [];
+
+    alert(`Digite os elementos da ${i + 1}ª linha da matriz A:`);
+
+    for (let j = 0; j < coluna; j++) {
+        matrizA[i][j] = parseInt(prompt(`Elemento [${i}][${j}]`));
+        }
+    }
+
+        //Matriz B
+    for (let i = 0; i < linha; i++) {
+        matrizB[i] = [];
+
+    alert(`Digite os elementos da ${i + 1}ª linha da matriz B:`);
+
+    for (let j = 0; j < coluna; j++) {
+        matrizB[i][j] = parseInt(prompt(`Elemento [${i}][${j}]`));
+        }
+
+    }
+
+        //Matriz C que vai somar as Matrizes A e B
+    let resultado = "MATRIZ SOMA:\n";
+
+    for (let i = 0; i < linha; i++) {
+    for (let j = 0; j < coluna; j++) {
+        resultado += (matrizA[i][j] + matrizB[i][j]) + " ";
+    }
+    resultado += "\n";
+    }
+
+        alert(resultado);
+
+    </script>
+</body>
+</html>

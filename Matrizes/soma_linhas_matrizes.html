@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma das Linhas</title>
+</head>
+<body>
+   <script>
+
+let matriz = [];
+let vetor = [];
+
+let linha = parseInt(prompt("Qual a quantidade de linhas da matriz?"));
+let coluna = parseInt(prompt("Qual a quantidade de colunas da matriz?"));
+
+// Leitura da matriz
+for (let i = 0; i < linha; i++) {
+
+    matriz[i] = [];
+
+    alert(`Digite os elementos da ${i + 1}ª linha:`);
+
+    for (let j = 0; j < coluna; j++) {
+
+        matriz[i][j] = parseFloat(prompt(`Elemento [${i}][${j}]`));
+
+    }
+}
+
+// Soma das linhas
+for (let i = 0; i < linha; i++) {
+
+    let soma = 0;
+
+    for (let j = 0; j < coluna; j++) {
+
+        soma += matriz[i][j];
+
+    }
+
+    vetor[i] = soma;
+
+}
+
+// Exibição
+alert("VETOR GERADO:\n" + vetor.join("\n"));
+
+</script>
+</body>
+</html>

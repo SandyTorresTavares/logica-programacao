@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Quantos números deseja informar?:'))
+        let numeros = []
+        let numerosPares = []
+
+        for (let i = 0; i < quantidade; i++) {
+            let numero = parseInt(prompt(`Digite o ${i+1}º número:`))
+            numeros.push(numero)
+
+            if (numero % 2 === 0) {
+                numerosPares.push(numero)
+
+            }
+        }
+        let maior = numeros[0];
+
+        for (let i = 1; i < numeros.length; i++) {
+            if (numeros[i] > maior) {
+            maior = numeros[i];
+            }
+        }
+
+        let posicao = numeros.indexOf(maior)
+
+        alert(`Maior valor: ${maior} \n Posição do maior valor: ${posicao}`)
+
+    </script>
+</body>
+</html>

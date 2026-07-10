@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+</head>
+<body>
+    <script>
+       let produto1 = 5.00
+       let produto2 = 3.50
+       let produto3 = 4.80
+       let produto4 = 8.90
+       let produto5 = 7.32
+       let escolha = parseFloat(prompt('Escolha o número do produto que deseja comprar:'));
+       let quantidade = parseInt(prompt('Quantos produtos deseja comprar?'));
+    
+
+       switch (escolha) {
+        case '1':
+            alert(`O valor total da compra do produto 1 é de R$${(produto1 * quantidade).toFixed(2)}.`);
+            break;
+        case '2':
+            alert(`O valor total da compra do produto 2 é de R$${(produto2 * quantidade).toFixed(2)}.`);
+            break;
+        case '3':
+            alert(`O valor total da compra do produto 3 é de R$${(produto3 * quantidade).toFixed(2)}.`);
+            break;
+        case '4':
+            alert(`O valor total da compra do produto 4 é de R$${(produto4 * quantidade).toFixed(2)}.`);
+            break;
+        case '5':
+            alert(`O valor total da compra do produto 5 é de R$${(produto5 * quantidade).toFixed(2)}.`);
+            break;
+        default:
+            alert('Produto inválido. Por favor, escolha um número entre 1 e 5.');}
+    </script>
+</body>
+</html>
