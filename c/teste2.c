@@ -11,12 +11,12 @@ int main() {
     salario = 5000.50;  
     altura = 1.75;
     genero = 'M';
-    strcpy(nome, "João");
+    strcpy(nome, "Jeferson");
 
     printf("Nome: %s\n", nome);
     printf("Idade: %d\n", idade);
     printf("Altura: %.2f\n", altura);
-    printf("Salário: %.2f\n", salario);
-    printf("Gênero: %c\n", genero);
+    printf("Salario: %.2f\n", salario);
+    printf("Genero: %c\n", genero);
     
 }
