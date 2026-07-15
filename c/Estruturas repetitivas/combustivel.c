@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int etanol = 0, gasolina = 0, disel = 0, combustivel;
+	int etanol = 0, gasolina = 0, diesel = 0, combustivel;
 
 	printf("Digite o tipo de combustivel (1 para alcool, 2 para gasolina, 3 para diesel ou 4 para parar)\n");
 	scanf("%d", &combustivel);
@@ -16,7 +16,7 @@ int main() {
 		gasolina++;
 		break;
 	case 3:
-		disel++;
+		diesel++;
 		break;
 	default:
 		printf("Opção inválida\n");
@@ -26,7 +26,7 @@ int main() {
 			
 	}
 
-	printf("Muito Obrigada!\nA quantidade de alcool foi %d\nA quantidade de gasolina foi %d\n A quantidade de diesel foi %d.", etanol, gasolina, disel);
+	printf("Muito Obrigado!\nA quantidade de alcool foi %d\nA quantidade de gasolina foi %d\n A quantidade de diesel foi %d.", etanol, gasolina, diesel);
 	return 0;
 
 
