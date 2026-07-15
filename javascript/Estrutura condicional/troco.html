@@ -13,7 +13,14 @@
         let valorPago = prompt('Qual o valor pago?');
         let troco =  (valorPago - valorProduto * quantidadeProduto);
 
-        alert(`o troco da compra é de ${troco} reais. Tenha um bom dia!`);
+        if (troco < 0) {
+            alert(`O valor pago é insuficiente. Faltam ${Math.abs(troco)} reais.`);
+        } else if (troco === 0) {
+            alert('O valor pago é exato. Não há troco.');
+        } else {
+            alert(`O troco da compra é de ${troco} reais. Tenha um bom dia!`);
+        }
+
          </script>
 </body>
 </html>
