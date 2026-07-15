@@ -21,7 +21,7 @@ int main() {
 	default:
 		printf("Opção inválida\n");
 	}
-	printf("Digite o tipo de combustivel (1 para álcool, 2 para gasolina, 3 para diesel ou 4 para parar\n");
+	printf("Digite o tipo de combustivel (1 para alcool, 2 para gasolina, 3 para diesel ou 4 para parar\n");
 	scanf("%d", &combustivel);
 			
 	}
